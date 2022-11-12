@@ -1,45 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olahmami <olahmami@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/12 20:26:04 by olahmami          #+#    #+#             */
-/*   Updated: 2022/11/12 22:34:58 by olahmami         ###   ########.fr       */
+/*   Created: 2022/11/12 22:30:13 by olahmami          #+#    #+#             */
+/*   Updated: 2022/11/12 23:03:55 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_check(va_list args, char c, int *count)
+void	ft_putstr(char *str, int *count)
 {
-	if (c == 'c')
-		ft_putchar(va_arg(args, int), count);
-	else if (c == 's')
-		ft_putstr(va_arg(args, char *), count);
-}
-
-int	ft_printf(const char *format, ...)
-{
-	va_list args;
-	int count;
 	int i;
 
-	va_start(args, format);
-	count = 0;
-	i = 0;
-	while (format[i])
+	if (!str)
+		ft_putstr("(null)", count);
+	else
 	{
-		if (format[i] == '%')
+		i = 0;
+		while (str[i])
 		{
+			ft_putchar(str[i], count);
 			i++;
-			ft_check(args, format[i], &count);
 		}
-		else
-			ft_putchar(format[i], &count);
-		i++;
 	}
-	va_end(args);
-	return (count);
 }

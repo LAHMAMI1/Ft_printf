@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 20:55:23 by olahmami          #+#    #+#             */
-/*   Updated: 2022/11/12 21:54:04 by olahmami         ###   ########.fr       */
+/*   Updated: 2022/11/12 22:38:27 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@
 
 int	ft_printf(const char *format, ...);
 void	ft_putchar(char c, int *count);
+void	ft_putstr(char *str, int *count);
 
 #endif

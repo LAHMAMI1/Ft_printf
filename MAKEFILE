@@ -6,7 +6,7 @@
 #    By: olahmami <olahmami@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/12 20:31:04 by olahmami          #+#    #+#              #
-#    Updated: 2022/11/12 21:53:46 by olahmami         ###   ########.fr        #
+#    Updated: 2022/11/12 22:38:47 by olahmami         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 SRCS = 	ft_printf.c \
-		ft_putchar.c 
+		ft_putchar.c \
+		ft_putstr.c 
 
 OBJ = ${SRCS:.c=.o}
 

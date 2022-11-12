@@ -5,18 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: olahmami <olahmami@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 08:05:56 by olahmami          #+#    #+#             */
-/*   Updated: 2022/11/12 02:57:27 by olahmami         ###   ########.fr       */
+/*   Created: 2022/11/12 20:55:23 by olahmami          #+#    #+#             */
+/*   Updated: 2022/11/12 21:54:04 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#define FT_PRINTF_H
 
-# include <unistd.h>
+#include <stdarg.h>
+#include <unistd.h>
 
-void	ft_putchar(char c);
-void	ft_putstr(char *s);
-void	ft_putstr(char *s);
+int	ft_printf(const char *format, ...);
+void	ft_putchar(char c, int *count);
 
 #endif

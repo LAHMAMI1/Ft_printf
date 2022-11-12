@@ -5,17 +5,40 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: olahmami <olahmami@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 04:54:27 by olahmami          #+#    #+#             */
-/*   Updated: 2022/11/10 10:21:09 by olahmami         ###   ########.fr       */
+/*   Created: 2022/11/12 20:26:04 by olahmami          #+#    #+#             */
+/*   Updated: 2022/11/12 22:20:36 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
+#include "ft_printf.h"
 
-int	ft_printf(const char *, ...)
+void	ft_check(va_list args, char c, int *count)
 {
-	va_list ptr;
+	if (c == 'c')
+		ft_putchar(va_arg(args, int), count);
+	
+}
+
+int	ft_printf(const char *format, ...)
+{
+	va_list args;
+	int count;
 	int i;
-	
-	
+
+	va_start(args, format);
+	count = 0;
+	i = 0;
+	while (format[i])
+	{
+		if (format[i] == '%')
+		{
+			i++;
+			ft_check(args, format[i], &count);
+		}
+		else
+			ft_putchar(format[i], &count);
+		i++;
+	}
+	va_end(args);
+	return (count);
 }

@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 22:30:13 by olahmami          #+#    #+#             */
-/*   Updated: 2022/11/12 23:03:55 by olahmami         ###   ########.fr       */
+/*   Updated: 2022/11/13 04:45:28 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr(char *str, int *count)
 {
-	int i;
+	int	i;
 
 	if (!str)
 		ft_putstr("(null)", count);
